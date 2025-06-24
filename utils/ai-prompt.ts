@@ -37,7 +37,7 @@ async function getCompletion(prompt: string) {
     // Fallback to GPT-4
     const gptResponse = await openai.chat.completions.create({
       messages: [{ role: "user", content: prompt }],
-      model: "gpt-4",
+      model: "gpt-4.1-2025-04-14",
     });
     return gptResponse.choices[0]?.message?.content || null;
   }
